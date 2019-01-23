@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.coderyuan.yuanguozheng.coordinator.SimpleCoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.coderyuan.yuanguozheng.coordinator.SimpleBarLayout
+            android:id="@+id/bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/header"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:text="上部的Header，可以隐藏起来"
+                android:layout_marginBottom="40dp"
+                android:background="@android:color/holo_blue_dark"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <TextView
+                android:id="@+id/hover_view"
+                android:background="@android:color/holo_orange_dark"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:text="我是悬停View"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </com.coderyuan.yuanguozheng.coordinator.SimpleBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.coderyuan.yuanguozheng.coordinator.SimpleCoordinatorLayout>
+
+    <LinearLayout
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_fold"
+            android:text="收起"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_unfold"
+            android:text="展开"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>
